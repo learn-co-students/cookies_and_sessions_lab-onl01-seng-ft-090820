@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+<%= session[:cart] %>
+
+
+
+
+<%= form_tag("/products", method: "post") do %>
+  <%= label_tag(:product, "Product name:") %>
+  <%= text_field_tag(:product) %>
+  <%= submit_tag("add to cart") %>
+<% end %>
+
+</html>
