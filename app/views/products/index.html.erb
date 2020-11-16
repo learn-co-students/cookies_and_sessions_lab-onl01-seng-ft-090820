@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+    <%= cart %>
+
+    <%= form_tag products_path do %>
+        <%= label_tag(:product, 'Product Name:')%> <br>
+        <%= text_field_tag(:product) %>
+        <%= submit_tag("add to cart") %>
+    <% end %>
+</html>
