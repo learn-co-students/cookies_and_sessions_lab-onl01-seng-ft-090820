@@ -1,7 +1,15 @@
-<h1>PYour Cart: </h1>
+<h1>Your Cart: </h1>
 
-<%= form_for @products do |f| %>
+<% cart.each do |item| %>
+    <li><%= item %></li>
+<% end %> 
 
+<h4>Add an Item:</h4>
+<%= form_tag('/') do %>
 
-    <%= f.submit %>
+    <%= label_tag 'product'  %>
+    <%= text_field_tag 'product' %>
+
+    <div><%= submit_tag "add to cart" %></div>
+
 <% end %>
